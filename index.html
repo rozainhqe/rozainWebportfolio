@@ -1,0 +1,669 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Rozain — Web Designer &amp; Aspiring Freelancer</title>
+<meta name="description" content="Rozain Haque — Mathematics student from Bangladesh building skills in web design, front-end development, Python and data work. Explore projects, skills and services.">
+<meta name="author" content="Rozain Haque">
+
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="Rozain — Web Designer & Aspiring Freelancer">
+<meta property="og:description" content="Mathematics student building a career across web design, development, Python and data work. See projects, skills and services.">
+<meta property="og:url" content="https://rozainhqe.github.io/">
+
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- Scroll progress bar -->
+<div class="scroll-progress" id="scrollProgress"></div>
+
+<!-- Custom cursor (desktop only, added via JS) -->
+<div class="cursor-dot" id="cursorDot"></div>
+<div class="cursor-ring" id="cursorRing"></div>
+
+<!-- Ambient background -->
+<div class="bg-grid" aria-hidden="true"></div>
+<div class="bg-glow bg-glow--one" aria-hidden="true"></div>
+<div class="bg-glow bg-glow--two" aria-hidden="true"></div>
+<div class="bg-glow bg-glow--three" aria-hidden="true"></div>
+
+<!-- ===================== NAVBAR ===================== -->
+<header class="navbar" id="navbar">
+  <div class="navbar__inner">
+    <a href="#home" class="navbar__logo" aria-label="Rozain — Home">
+      <span class="navbar__logo-mark">R</span><span class="navbar__logo-text">ozain</span><span class="navbar__logo-dot">.</span>
+    </a>
+
+    <nav class="navbar__links" id="navLinks">
+      <a href="#home" class="nav-link active">Home</a>
+      <a href="#about" class="nav-link">About</a>
+      <a href="#skills" class="nav-link">Skills</a>
+      <a href="#projects" class="nav-link">Projects</a>
+      <a href="#experience" class="nav-link">Experience</a>
+      <a href="#education" class="nav-link">Education</a>
+      <a href="#services" class="nav-link">Services</a>
+      <a href="#contact" class="nav-link">Contact</a>
+    </nav>
+
+    <div class="navbar__actions">
+      <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark and light theme">
+        <svg class="icon icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg>
+        <svg class="icon icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+      </button>
+      <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<!-- Mobile menu overlay -->
+<div class="mobile-menu" id="mobileMenu">
+  <nav class="mobile-menu__links">
+    <a href="#home" class="mobile-link">Home</a>
+    <a href="#about" class="mobile-link">About</a>
+    <a href="#skills" class="mobile-link">Skills</a>
+    <a href="#projects" class="mobile-link">Projects</a>
+    <a href="#experience" class="mobile-link">Experience</a>
+    <a href="#education" class="mobile-link">Education</a>
+    <a href="#services" class="mobile-link">Services</a>
+    <a href="#contact" class="mobile-link">Contact</a>
+  </nav>
+</div>
+
+<main>
+
+<!-- ===================== HERO ===================== -->
+<section class="hero" id="home">
+  <div class="hero__inner">
+    <div class="hero__content reveal">
+      <p class="hero__eyebrow">
+        <span class="pulse-dot"></span> Dhaka, Bangladesh — open to freelance work
+      </p>
+      <h1 class="hero__title">
+        Hi, I'm <span class="text-gradient">Rozain</span> <span class="wave">👋</span>
+      </h1>
+      <p class="hero__role">
+        Mathematics Student <span class="hero__role-sep">•</span> Web Designer <span class="hero__role-sep">•</span> <span class="typing" id="typingText"></span><span class="typing-cursor">|</span>
+      </p>
+      <p class="hero__desc">
+        I build modern websites, creative digital experiences and practical solutions while continuously expanding my skills in programming and technology.
+      </p>
+      <div class="hero__actions">
+        <a href="#projects" class="btn btn--primary">
+          View My Work
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </a>
+        <a href="#contact" class="btn btn--ghost">Let's Work Together</a>
+      </div>
+
+      <div class="hero__stats">
+        <div class="hero__stat">
+          <span class="hero__stat-num" data-count="3">0</span><span class="hero__stat-suffix">+</span>
+          <span class="hero__stat-label">Years Teaching</span>
+        </div>
+        <div class="hero__stat">
+          <span class="hero__stat-num" data-count="5">0</span><span class="hero__stat-suffix">+</span>
+          <span class="hero__stat-label">Skills in Progress</span>
+        </div>
+        <div class="hero__stat">
+          <span class="hero__stat-num" data-count="4">0</span><span class="hero__stat-suffix">+</span>
+          <span class="hero__stat-label">Projects Built</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="hero__visual reveal" style="--delay:0.15s">
+
+      <div class="photo-frame">
+        <img src="images/photo1.jpg" alt="Rozain Haque — portrait" class="photo-frame__img" width="450" height="600" loading="eager">
+      </div>
+
+      <!-- Signature: growth trajectory graph -->
+      <div class="trajectory-card trajectory-card--mini glass">
+        <div class="trajectory-card__header">
+          <span class="trajectory-card__title">// growth_trajectory.py</span>
+          <div class="trajectory-card__dots"><span></span><span></span><span></span></div>
+        </div>
+        <svg class="trajectory-svg" viewBox="0 0 460 300" fill="none" aria-hidden="true">
+          <defs>
+            <linearGradient id="pathGrad" x1="0" y1="0" x2="1" y2="0">
+              <stop offset="0%" stop-color="#22D3EE"/>
+              <stop offset="45%" stop-color="#8B5CF6"/>
+              <stop offset="100%" stop-color="#EC4899"/>
+            </linearGradient>
+            <filter id="glowFilter" x="-50%" y="-50%" width="200%" height="200%">
+              <feGaussianBlur stdDeviation="4" result="blur"/>
+              <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+            </filter>
+          </defs>
+          <!-- grid lines -->
+          <g class="trajectory-grid" stroke="currentColor" stroke-width="0.5" opacity="0.15">
+            <line x1="0" y1="60" x2="460" y2="60"/>
+            <line x1="0" y1="130" x2="460" y2="130"/>
+            <line x1="0" y1="200" x2="460" y2="200"/>
+            <line x1="0" y1="260" x2="460" y2="260"/>
+          </g>
+          <path id="trajPath" class="trajectory-path" d="M20,250 C90,235 100,190 150,175 C210,157 220,110 280,95 C330,82 350,55 430,35" stroke="url(#pathGrad)" stroke-width="3" stroke-linecap="round" filter="url(#glowFilter)"/>
+          <circle id="trajDot" r="6" fill="#22D3EE" filter="url(#glowFilter)"/>
+        </svg>
+        <div class="trajectory-card__labels">
+          <span>Math</span>
+          <span>Web&nbsp;Dev</span>
+          <span>Python</span>
+          <span class="active-label">Automation</span>
+        </div>
+      </div>
+
+      <div class="floating-chip floating-chip--1">HTML · CSS · JS</div>
+      <div class="floating-chip floating-chip--2">Learning Python 🐍</div>
+    </div>
+  </div>
+
+  <a href="#about" class="scroll-cue" aria-label="Scroll to About">
+    <span></span>
+  </a>
+</section>
+
+<!-- ===================== ABOUT ===================== -->
+<section class="section" id="about">
+  <div class="section__inner">
+    <p class="section__eyebrow reveal">About</p>
+    <h2 class="section__title reveal">The person behind the code</h2>
+
+    <div class="about__grid">
+      <div class="about__text reveal">
+        <p>I'm Rozain, a Mathematics student from Bangladesh with a strong interest in technology, web design and freelancing. I enjoy turning ideas into clean, interactive and visually engaging websites.</p>
+        <p>My background in mathematics has helped me develop logical thinking and problem-solving skills, while my growing experience in web development and design allows me to transform those ideas into practical digital experiences.</p>
+        <p>I'm continuously learning, building projects and improving my skills — with the long-term goal of becoming a successful technology professional and freelancer.</p>
+
+        <div class="about__path">
+          <span class="about__path-item">Web Development</span>
+          <svg class="about__path-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          <span class="about__path-item">Freelancing</span>
+          <svg class="about__path-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          <span class="about__path-item">Python</span>
+          <svg class="about__path-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          <span class="about__path-item">Automation &amp; Data</span>
+        </div>
+      </div>
+
+      <div class="about__card glass reveal" style="--delay:0.1s">
+        <div class="about__avatar">
+          <img src="images/photo1.jpg" alt="Photo of Rozain Haque" loading="lazy">
+        </div>
+        <h3>Quick facts</h3>
+        <ul class="about__facts">
+          <li><span>Based in</span><strong>Dhaka, Bangladesh</strong></li>
+          <li><span>Studying</span><strong>Mathematics, DCU</strong></li>
+          <li><span>Focus</span><strong>Web Design &amp; Dev</strong></li>
+          <li><span>Currently learning</span><strong>Python</strong></li>
+          <li><span>Available for</span><strong>Freelance work</strong></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== SKILLS ===================== -->
+<section class="section section--alt" id="skills">
+  <div class="section__inner">
+    <p class="section__eyebrow reveal">Skills</p>
+    <h2 class="section__title reveal">Tools I build with</h2>
+    <p class="section__subtitle reveal">A snapshot of where I am right now — honestly rated, always improving.</p>
+
+    <div class="skills__grid">
+
+      <div class="skill-card glass reveal">
+        <div class="skill-card__icon skill-card__icon--blue">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 4l1.5 16L12 22l6.5-2L20 4H4z"/><path d="M8 8h8l-.4 4.5H9l.2 2.3 2.8.9 2.8-.9.2-2"/></svg>
+        </div>
+        <h3>Web Development</h3>
+        <ul class="skill-card__list">
+          <li>HTML5 <span class="bar"><span class="bar__fill" data-level="90"></span></span></li>
+          <li>CSS3 <span class="bar"><span class="bar__fill" data-level="85"></span></span></li>
+          <li>JavaScript <span class="bar"><span class="bar__fill" data-level="70"></span></span></li>
+          <li>Responsive Design <span class="bar"><span class="bar__fill" data-level="80"></span></span></li>
+        </ul>
+      </div>
+
+      <div class="skill-card glass reveal" style="--delay:0.05s">
+        <div class="skill-card__icon skill-card__icon--purple">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 3c-4 0-6 1.5-6 4v2h6v1H5s-3 0-3 4 3 4 3 4h2v-3s0-2 2-2h5s3 0 3-3V6s0-3-5-3z"/><path d="M12 21c4 0 6-1.5 6-4v-2h-6v-1h7s3 0 3-4-3-4-3-4h-2v3s0 2-2 2H10s-3 0-3 3v3s0 3 5 3z"/></svg>
+        </div>
+        <h3>Programming</h3>
+        <ul class="skill-card__list">
+          <li>Python <span class="bar"><span class="bar__fill" data-level="45"></span></span></li>
+          <li>Problem Solving <span class="bar"><span class="bar__fill" data-level="75"></span></span></li>
+        </ul>
+        <span class="skill-card__badge">Actively learning</span>
+      </div>
+
+      <div class="skill-card glass reveal" style="--delay:0.1s">
+        <div class="skill-card__icon skill-card__icon--pink">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="3"/><path d="M12 3v3M12 18v3M3 12h3M18 12h3"/></svg>
+        </div>
+        <h3>Design</h3>
+        <ul class="skill-card__list">
+          <li>Figma <span class="bar"><span class="bar__fill" data-level="65"></span></span></li>
+          <li>Canva <span class="bar"><span class="bar__fill" data-level="85"></span></span></li>
+          <li>UI Design <span class="bar"><span class="bar__fill" data-level="60"></span></span></li>
+        </ul>
+      </div>
+
+      <div class="skill-card glass reveal" style="--delay:0.15s">
+        <div class="skill-card__icon skill-card__icon--cyan">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="4" width="18" height="14" rx="2"/><path d="M7 9h10M7 13h6"/></svg>
+        </div>
+        <h3>Productivity &amp; Data</h3>
+        <ul class="skill-card__list">
+          <li>Microsoft Excel <span class="bar"><span class="bar__fill" data-level="80"></span></span></li>
+          <li>Data Entry <span class="bar"><span class="bar__fill" data-level="85"></span></span></li>
+          <li>PDF → Excel/CSV <span class="bar"><span class="bar__fill" data-level="70"></span></span></li>
+        </ul>
+      </div>
+
+      <div class="skill-card glass reveal" style="--delay:0.2s">
+        <div class="skill-card__icon skill-card__icon--blue">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 2C6.5 2 2 6.5 2 12c0 4.4 2.9 8.2 6.8 9.5.5.1.7-.2.7-.5v-1.7c-2.8.6-3.4-1.3-3.4-1.3-.5-1.1-1.1-1.5-1.1-1.5-.9-.6.1-.6.1-.6 1 .1 1.5 1 1.5 1 .9 1.5 2.3 1.1 2.9.8.1-.7.4-1.1.6-1.4-2.3-.3-4.6-1.1-4.6-5 0-1.1.4-2 1-2.7-.1-.3-.5-1.3.1-2.6 0 0 .8-.3 2.7 1a9.4 9.4 0 015 0c1.9-1.3 2.7-1 2.7-1 .5 1.3.2 2.3.1 2.6.6.7 1 1.6 1 2.7 0 3.9-2.3 4.7-4.6 5 .4.3.7 1 .7 2v3c0 .3.2.6.7.5A10 10 0 0022 12c0-5.5-4.5-10-10-10z"/></svg>
+        </div>
+        <h3>Tools</h3>
+        <ul class="skill-card__list">
+          <li>GitHub <span class="bar"><span class="bar__fill" data-level="75"></span></span></li>
+          <li>GitHub Pages <span class="bar"><span class="bar__fill" data-level="80"></span></span></li>
+        </ul>
+      </div>
+
+      <div class="skill-card glass reveal" style="--delay:0.25s">
+        <div class="skill-card__icon skill-card__icon--purple">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M8 3H5a2 2 0 00-2 2v3M16 3h3a2 2 0 012 2v3M8 21H5a2 2 0 01-2-2v-3M16 21h3a2 2 0 002-2v-3"/></svg>
+        </div>
+        <h3>Freelancing</h3>
+        <ul class="skill-card__list">
+          <li>Communication <span class="bar"><span class="bar__fill" data-level="80"></span></span></li>
+          <li>Client Handling <span class="bar"><span class="bar__fill" data-level="60"></span></span></li>
+        </ul>
+        <span class="skill-card__badge">Building experience</span>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ===================== PROJECTS ===================== -->
+<section class="section" id="projects">
+  <div class="section__inner">
+    <p class="section__eyebrow reveal">Projects</p>
+    <h2 class="section__title reveal">Things I've built</h2>
+    <p class="section__subtitle reveal">A mix of personal experiments and concept work — each one taught me something new.</p>
+
+    <div class="filters reveal">
+      <button class="filter-btn active" data-filter="all">All</button>
+      <button class="filter-btn" data-filter="websites">Websites</button>
+      <button class="filter-btn" data-filter="javascript">JavaScript</button>
+      <button class="filter-btn" data-filter="design">Design</button>
+      <button class="filter-btn" data-filter="other">Other</button>
+    </div>
+
+    <div class="projects__grid" id="projectsGrid">
+
+      <article class="project-card glass reveal" data-tags="websites other">
+        <div class="project-card__preview project-card__preview--a">
+          <span class="project-card__tag">Personal Portfolio</span>
+        </div>
+        <div class="project-card__body">
+          <h3>Personal Portfolio Website</h3>
+          <p>My personal GitHub Pages portfolio — showcasing my skills, projects and services as a growing freelancer.</p>
+          <div class="project-card__stack">
+            <span>HTML</span><span>CSS</span><span>JavaScript</span>
+          </div>
+          <div class="project-card__links">
+            <a href="https://rozainhqe.github.io/" target="_blank" rel="noopener" class="link-btn">Live Demo ↗</a>
+            <a href="#" class="link-btn link-btn--ghost placeholder-link">GitHub</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="project-card glass reveal" data-tags="websites javascript" style="--delay:0.05s">
+        <div class="project-card__preview project-card__preview--b">
+          <span class="project-card__tag">Interactive Experience</span>
+        </div>
+        <div class="project-card__body">
+          <h3>Interactive Birthday Website</h3>
+          <p>An interactive birthday surprise site with animated scenes, a gift-box interaction and a letter reveal, built with layered transitions and visual effects.</p>
+          <div class="project-card__stack">
+            <span>HTML</span><span>CSS</span><span>JavaScript</span><span>Animation</span>
+          </div>
+          <div class="project-card__links">
+            <a href="#" class="link-btn placeholder-link">Live Demo</a>
+            <a href="#" class="link-btn link-btn--ghost placeholder-link">GitHub</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="project-card glass reveal" data-tags="websites" style="--delay:0.1s">
+        <div class="project-card__preview project-card__preview--c">
+          <span class="project-card__tag">Business Website</span>
+        </div>
+        <div class="project-card__body">
+          <h3>Gym Website Concept</h3>
+          <p>A business-style website concept designed for a gym — built around clear sections for services, plans and calls to action.</p>
+          <div class="project-card__stack">
+            <span>HTML</span><span>CSS</span><span>JavaScript</span>
+          </div>
+          <div class="project-card__links">
+            <a href="#" class="link-btn placeholder-link">Live Demo</a>
+            <a href="#" class="link-btn link-btn--ghost placeholder-link">GitHub</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="project-card glass reveal" data-tags="websites" style="--delay:0.15s">
+        <div class="project-card__preview project-card__preview--d">
+          <span class="project-card__tag">Business Website</span>
+        </div>
+        <div class="project-card__body">
+          <h3>Pharmacy Website Concept</h3>
+          <p>A multi-section pharmacy website concept covering product and service presentation with a fully responsive layout.</p>
+          <div class="project-card__stack">
+            <span>HTML</span><span>CSS</span><span>JavaScript</span><span>Responsive</span>
+          </div>
+          <div class="project-card__links">
+            <a href="#" class="link-btn placeholder-link">Live Demo</a>
+            <a href="#" class="link-btn link-btn--ghost placeholder-link">GitHub</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="project-card glass reveal" data-tags="design other javascript" style="--delay:0.2s">
+        <div class="project-card__preview project-card__preview--e">
+          <span class="project-card__tag">Experiments</span>
+        </div>
+        <div class="project-card__body">
+          <h3>Creative Web Experiments</h3>
+          <p>A collection of small experimental and creative web projects — animations and interactive design ideas I build to sharpen my front-end skills.</p>
+          <div class="project-card__stack">
+            <span>HTML</span><span>CSS</span><span>JavaScript</span>
+          </div>
+          <div class="project-card__links">
+            <a href="#" class="link-btn placeholder-link">Live Demo</a>
+            <a href="#" class="link-btn link-btn--ghost placeholder-link">GitHub</a>
+          </div>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- ===================== EXPERIENCE ===================== -->
+<section class="section section--alt" id="experience">
+  <div class="section__inner">
+    <p class="section__eyebrow reveal">Experience</p>
+    <h2 class="section__title reveal">Where I've put in the work</h2>
+
+    <div class="timeline">
+      <div class="timeline__item reveal">
+        <div class="timeline__dot"></div>
+        <div class="timeline__card glass">
+          <span class="timeline__badge">3 Years</span>
+          <h3>Private Tutor</h3>
+          <p class="timeline__meta">Mathematics &amp; Science — Classes 5 to 10</p>
+          <p>Teaching students across five grade levels, mainly in mathematics and science subjects — building strong communication, patience and the ability to explain complex ideas simply.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== EDUCATION ===================== -->
+<section class="section" id="education">
+  <div class="section__inner">
+    <p class="section__eyebrow reveal">Education</p>
+    <h2 class="section__title reveal">Academic background</h2>
+
+    <div class="timeline">
+      <div class="timeline__item reveal">
+        <div class="timeline__dot"></div>
+        <div class="timeline__card glass">
+          <h3>Dhaka Central University (DCU)</h3>
+          <p class="timeline__meta">B.Sc. in Mathematics — Dhaka College Campus</p>
+          <p>Admitted through the A Unit · Merit Position 598</p>
+        </div>
+      </div>
+      <div class="timeline__item reveal" style="--delay:0.1s">
+        <div class="timeline__dot"></div>
+        <div class="timeline__card glass">
+          <h3>Higher Secondary Certificate (HSC)</h3>
+          <p class="timeline__meta">Science — Carmaichael Collage Rangpur</p>
+          <p>GPA 4.50</p>
+        </div>
+      </div>
+      <div class="timeline__item reveal" style="--delay:0.2s">
+        <div class="timeline__dot"></div>
+        <div class="timeline__card glass">
+          <h3>Secondary School Certificate (SSC)</h3>
+          <p class="timeline__meta">Science — Shadek Hossain Memorial High School</p>
+          <p>GPA 5.00</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Certifications -->
+    <div class="cert-block reveal">
+      <h3 class="cert-block__title">Certifications</h3>
+      <div class="cert-card glass">
+        <div class="cert-card__icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 2l3 6 6 .9-4.5 4.3 1 6-5.5-3-5.5 3 1-6L3 8.9 9 8l3-6z"/></svg>
+        </div>
+        <div>
+          <h4>Computer Course Certificate</h4>
+          <p>Bangladesh Technical and Software Institute</p>
+        </div>
+      </div>
+    </div>
+    <div class="cert-block reveal">
+      
+      <div class="cert-card glass">
+        <div class="cert-card__icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 2l3 6 6 .9-4.5 4.3 1 6-5.5-3-5.5 3 1-6L3 8.9 9 8l3-6z"/></svg>
+        </div>
+        <div>
+          <h4>Higher Secondary Certificate (HSC)</h4>
+          <p>Bangladesh Education Board</p>
+        </div>
+      </div>
+    <div class="cert-block reveal">
+      
+      <div class="cert-card glass">
+        <div class="cert-card__icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 2l3 6 6 .9-4.5 4.3 1 6-5.5-3-5.5 3 1-6L3 8.9 9 8l3-6z"/></svg>
+        </div>
+        <div>
+          <h4>Secondary School Certificate (SSC)</h4>
+          <p>Bangladesh Education Board</p>
+        </div>
+      </div>
+    </di
+  </div>
+</section>
+
+<!-- ===================== CURRENTLY LEARNING ===================== -->
+<section class="section section--alt" id="learning">
+  <div class="section__inner">
+    <p class="section__eyebrow reveal">Currently Learning</p>
+    <h2 class="section__title reveal">Building in public, one skill at a time</h2>
+    <p class="section__subtitle reveal">I'm not claiming to be an expert in everything — I'm a motivated learner actively building real projects.</p>
+
+    <div class="roadmap">
+      <div class="roadmap__line" aria-hidden="true"></div>
+
+      <div class="roadmap__item reveal">
+        <div class="roadmap__marker roadmap__marker--active"></div>
+        <div class="roadmap__card glass">
+          <h4>Python</h4>
+          <p>Learning core Python to move from web design into programming and automation.</p>
+        </div>
+      </div>
+      <div class="roadmap__item reveal" style="--delay:0.08s">
+        <div class="roadmap__marker roadmap__marker--active"></div>
+        <div class="roadmap__card glass">
+          <h4>Advanced JavaScript</h4>
+          <p>Going deeper into JS to build richer, more interactive front-end experiences.</p>
+        </div>
+      </div>
+      <div class="roadmap__item reveal" style="--delay:0.16s">
+        <div class="roadmap__marker"></div>
+        <div class="roadmap__card glass">
+          <h4>Modern Web Development</h4>
+          <p>Exploring current tools and practices in front-end development.</p>
+        </div>
+      </div>
+      <div class="roadmap__item reveal" style="--delay:0.24s">
+        <div class="roadmap__marker"></div>
+        <div class="roadmap__card glass">
+          <h4>Freelancing</h4>
+          <p>Learning how to find clients, scope projects and deliver professionally.</p>
+        </div>
+      </div>
+      <div class="roadmap__item reveal" style="--delay:0.32s">
+        <div class="roadmap__marker"></div>
+        <div class="roadmap__card glass">
+          <h4>Data &amp; Automation</h4>
+          <p>Working toward data-related and automation skills powered by Python.</p>
+        </div>
+      </div>
+      <div class="roadmap__item reveal" style="--delay:0.4s">
+        <div class="roadmap__marker"></div>
+        <div class="roadmap__card glass">
+          <h4>UI/UX Design</h4>
+          <p>Sharpening design instincts to build more polished, user-friendly interfaces.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== SERVICES ===================== -->
+<section class="section" id="services">
+  <div class="section__inner">
+    <p class="section__eyebrow reveal">Services</p>
+    <h2 class="section__title reveal">What I can do for you</h2>
+
+    <div class="services__grid">
+      <div class="service-card glass reveal">
+        <div class="service-card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="4" width="18" height="14" rx="2"/><path d="M3 9h18"/></svg></div>
+        <h3>Website Design</h3>
+        <p>Modern, responsive websites for personal brands and businesses.</p>
+      </div>
+      <div class="service-card glass reveal" style="--delay:0.05s">
+        <div class="service-card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M8 3L3 8l5 5M16 21l5-5-5-5M14 4l-4 16"/></svg></div>
+        <h3>Frontend Development</h3>
+        <p>HTML, CSS and JavaScript based websites, built clean and fast.</p>
+      </div>
+      <div class="service-card glass reveal" style="--delay:0.1s">
+        <div class="service-card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 21h18M5 21V7l7-4 7 4v14M9 9h1M9 13h1M14 9h1M14 13h1"/></svg></div>
+        <h3>Business Websites</h3>
+        <p>Professional sites for local businesses — gyms, pharmacies, shops and more.</p>
+      </div>
+      <div class="service-card glass reveal" style="--delay:0.15s">
+        <div class="service-card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="4" y="3" width="16" height="18" rx="1"/><path d="M8 8h8M8 12h8M8 16h4"/></svg></div>
+        <h3>Data Entry</h3>
+        <p>Accurate, organized data entry and formatting you can rely on.</p>
+      </div>
+      <div class="service-card glass reveal" style="--delay:0.2s">
+        <div class="service-card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 4h16v4H4zM4 12h10v8H4zM17 12h3v8h-3z"/></svg></div>
+        <h3>Excel</h3>
+        <p>Spreadsheet formatting, organization and basic data work.</p>
+      </div>
+      <div class="service-card glass reveal" style="--delay:0.25s">
+        <div class="service-card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="13.5" cy="6.5" r="2.5"/><path d="M2 21c0-4 4-7 8-7M11 21c1-3 4-5 7-5"/></svg></div>
+        <h3>Graphic Design</h3>
+        <p>Canva and Figma based designs for social, print and web.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== CONTACT ===================== -->
+<section class="section contact" id="contact">
+  <div class="section__inner">
+    <div class="contact__grid">
+      <div class="reveal">
+        <p class="section__eyebrow">Contact</p>
+        <h2 class="section__title">Let's build something great together.</h2>
+        <p class="section__subtitle">Have a project, idea or opportunity? I'd love to hear about it.</p>
+
+        <div class="contact__links">
+          <a href="mailto:rozainhaque@gmail.com" class="contact__link">
+            <span class="contact__link-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg></span>
+            <span>rozainhaque@gmail.com</span>
+          </a>
+          <a href="https://github.com/rozainhqe" target="_blank" rel="noopener" class="contact__link">
+            <span class="contact__link-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 2C6.5 2 2 6.5 2 12c0 4.4 2.9 8.2 6.8 9.5.5.1.7-.2.7-.5v-1.7c-2.8.6-3.4-1.3-3.4-1.3-.5-1.1-1.1-1.5-1.1-1.5-.9-.6.1-.6.1-.6 1 .1 1.5 1 1.5 1 .9 1.5 2.3 1.1 2.9.8.1-.7.4-1.1.6-1.4-2.3-.3-4.6-1.1-4.6-5 0-1.1.4-2 1-2.7-.1-.3-.5-1.3.1-2.6 0 0 .8-.3 2.7 1a9.4 9.4 0 015 0c1.9-1.3 2.7-1 2.7-1 .5 1.3.2 2.3.1 2.6.6.7 1 1.6 1 2.7 0 3.9-2.3 4.7-4.6 5 .4.3.7 1 .7 2v3c0 .3.2.6.7.5A10 10 0 0022 12c0-5.5-4.5-10-10-10z"/></svg></span>
+            <span>github.com/rozainhqe</span>
+          </a>
+          <a href="https://www.upwork.com/freelancers/~013140b2cd3dadc047?mp_source=share" target="_blank" rel="noopener" class="contact__link">
+            <span class="contact__link-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M20 12a8 8 0 10-9.3 7.9v-5.6H8.4V12h2.3V9.8c0-2.3 1.4-3.6 3.5-3.6.9 0 1.9.2 1.9.2v2.2h-1.1c-1.1 0-1.4.7-1.4 1.4V12h2.5l-.4 2.3h-2.1v5.6A8 8 0 0020 12z"/></svg></span>
+            <span>Upwork Profile</span>
+          </a>
+          <a href="https://facebook.com/rozainHQe" target="_blank" rel="noopener" class="contact__link">
+            <span class="contact__link-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M17 2h-3a5 5 0 00-5 5v3H6v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3V2z"/></svg></span>
+            <span>facebook.com/rozainHQe</span>
+          </a>
+        </div>
+      </div>
+
+      <form class="contact__form glass reveal" style="--delay:0.1s" id="contactForm">
+        <div class="form-row">
+          <label for="name">Name</label>
+          <input type="text" id="name" name="name" placeholder="Your name" required>
+        </div>
+        <div class="form-row">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" placeholder="you@example.com" required>
+        </div>
+        <div class="form-row">
+          <label for="message">Message</label>
+          <textarea id="message" name="message" rows="4" placeholder="Tell me about your project..." required></textarea>
+        </div>
+        <button type="submit" class="btn btn--primary btn--full">
+          Send Message
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z"/></svg>
+        </button>
+        <p class="form-note">This form is a placeholder UI — connect it to a form service or backend to receive messages.</p>
+      </form>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ===================== FOOTER ===================== -->
+<footer class="footer">
+  <div class="footer__inner">
+    <a href="#home" class="navbar__logo">
+      <span class="navbar__logo-mark">R</span><span class="navbar__logo-text">ozain</span><span class="navbar__logo-dot">.</span>
+    </a>
+    <p class="footer__tagline">Mathematics student · Web designer · Aspiring freelancer</p>
+    <p class="footer__copy">© <span id="year"></span> Rozain Haque. Built with HTML, CSS &amp; JavaScript — hosted on GitHub Pages.</p>
+    <p class="footer__easter-egg" id="easterEgg" title="You found it.">console.log("thanks for scrolling this far ✦");</p>
+  </div>
+</footer>
+
+<button class="back-to-top" id="backToTop" aria-label="Back to top">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
+</button>
+
+<script src="script.js"></script>
+</body>
+</html>
